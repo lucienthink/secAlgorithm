@@ -9,7 +9,7 @@ var Caesar = {
         var len=c.length;
         for (var i=0; i<len; i++)
         {
-            c[i] = fun.numToChar[fun.charToNum[c[i]]+k];
+            c[i] = fun.numToChar[((fun.charToNum[c[i]]+k)%26)?(fun.charToNum[c[i]]+k)%26:26];
         }
         var str = c.join('');
         console.log(str);
@@ -24,7 +24,7 @@ var Caesar = {
         var len=c.length;
         for (var i=0; i<len; i++)
         {
-            c[i] = fun.numToChar[fun.charToNum[c[i]]-k];
+            c[i] = fun.numToChar[((fun.charToNum[c[i]]-k)%26)?((fun.charToNum[c[i]]-k)%26):26];
         }
         var str = c.join('');
         console.log(str);
